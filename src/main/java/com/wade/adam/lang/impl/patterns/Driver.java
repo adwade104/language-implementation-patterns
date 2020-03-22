@@ -4,7 +4,8 @@ public class Driver {
 
     public static void main(String[] args){
 
-        System.out.println("Hello Lang!");
+        Parser parser = new Parser();
+        parser.parse("return x + 1 ;");
 
     }
 

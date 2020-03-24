@@ -1,4 +1,4 @@
-package com.wade.adam.lang.impl.patterns;
+package com.wade.adam.lang.impl.patterns.sample;
 
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;

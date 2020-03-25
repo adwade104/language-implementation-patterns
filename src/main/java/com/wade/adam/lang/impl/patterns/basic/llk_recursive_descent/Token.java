@@ -1,4 +1,4 @@
-package com.wade.adam.lang.impl.patterns.ll1_recursive_descent;
+package com.wade.adam.lang.impl.patterns.basic.llk_recursive_descent;
 
 public class Token {
 
@@ -12,8 +12,7 @@ public class Token {
 
     @Override
     public String toString() {
-        String tokenName = ListLexer.tokenNames[type];
+        String tokenName = LookaheadLexer.tokenNames[type];
         return "<'" + text + "'," + tokenName + ">";
     }
-
 }

@@ -1,4 +1,4 @@
-package com.wade.adam.lang.impl.patterns.llk_recursive_descent;
+package com.wade.adam.lang.impl.patterns.basic.llk_recursive_descent;
 
 public abstract class Lexer {
     public static final char EOF = (char) -1;

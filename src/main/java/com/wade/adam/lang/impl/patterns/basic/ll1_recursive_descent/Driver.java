@@ -1,4 +1,4 @@
-package com.wade.adam.lang.impl.patterns.ll1_recursive_descent;
+package com.wade.adam.lang.impl.patterns.basic.ll1_recursive_descent;
 
 public class Driver {
 

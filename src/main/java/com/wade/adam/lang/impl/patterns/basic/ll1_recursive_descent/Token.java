@@ -13,7 +13,7 @@ public class Token {
     @Override
     public String toString() {
         String tokenName = ListLexer.tokenNames[type];
-        return "<'" + text + "'," + tokenName + ">";
+        return "<'" + text + "', " + tokenName + ">";
     }
 
 }

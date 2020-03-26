@@ -22,16 +22,6 @@ public abstract class Lexer {
         }
     }
 
-    public void match(char x){
-        if(c == x){
-            consume();
-        }
-        else{
-            throw new Error();
-        }
-
-    }
-
     public abstract Token nextToken();
     public abstract String getTokenName(int x);
 

@@ -14,17 +14,19 @@ public class ListLexer extends Lexer {
     }
 
     public Token nextToken() {
+        System.out.println("Lexer identifying next token...");
         while(c != EOF){
             switch (c) {
                 case ' ': case '\t': case '\n': case '\r': WS(); continue;
-                case ',': consume(); return new Token(COMMA, ",");
-                case '[': consume(); return new Token(LBRACK, "[");
-                case ']': consume(); return new Token(RBRACK, "]");
+                case ',': System.out.println("Lexer recognized token: COMMA"); consume(); return new Token(COMMA, ",");
+                case '[': System.out.println("Lexer recognized token: LBRACK"); consume(); return new Token(LBRACK, "[");
+                case ']': System.out.println("Lexer recognized token: RBRACK"); consume(); return new Token(RBRACK, "]");
                 default:
                     if(isLetter()) return NAME();
                     throw new Error("invalid character: "+c);
             }
         }
+        System.out.println("Lexer recognized token: EOF");
         return new Token(EOF_TYPE, "<EOF>");
     }
 
@@ -33,12 +35,14 @@ public class ListLexer extends Lexer {
     }
 
     private Token NAME(){
+        System.out.println("Lexer recognized token: NAME");
         StringBuilder sb = new StringBuilder();
         do { sb.append(c); consume(); } while (isLetter());
         return new Token(NAME, sb.toString());
     }
 
     private void WS(){
+        System.out.println("Lexer recognized token: WHITESPACE");
         while(c == ' ' || c == '\t' || c == '\n' || c == '\r') { consume(); };
     }
 

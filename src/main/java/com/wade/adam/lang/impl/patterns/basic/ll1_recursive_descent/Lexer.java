@@ -8,8 +8,11 @@ public abstract class Lexer {
     char c; //current character
 
     public Lexer(String input) {
+        System.out.println("Initializing Lexer...");
         this.input = input;
         c = input.charAt(p);
+        System.out.println(String.format("Pointer set to p = %d, Character set to c = '%s'", p,c));
+        System.out.println("Lexer initialized.\n");
     }
 
     public void consume(){
@@ -20,15 +23,7 @@ public abstract class Lexer {
         else{
             c = input.charAt(p);
         }
-    }
-
-    public void match(char x){
-        if(c == x){
-            consume();
-        }
-        else{
-            throw new Error();
-        }
+        System.out.println(String.format("Lexer consuming new character: p = %d, c = '%s'", p, c));
     }
 
     public abstract Token nextToken();
